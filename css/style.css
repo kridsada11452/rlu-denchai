@@ -1,0 +1,777 @@
+/********** Template CSS **********/
+:root {
+    --primary: #ffcae5;
+    --secondary: #ffcae5;
+    --light: #f3f3f3;
+    --dark: #ff99cc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+*{
+    font-family: "Prompt", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+.fw-bold {
+    font-weight: 700 !important;
+    font-family: "Prompt", sans-serif;
+   
+}
+
+h3,
+.h3,
+h4,
+.h4,
+.fw-medium {
+    font-weight: 600 !important;
+    font-family: "Prompt", sans-serif;
+ 
+}
+
+h5,
+.h5,
+h6,
+.h6,
+.fw-semi-bold {
+    font-weight: 500 !important;
+    font-family: "Prompt", sans-serif;
+    
+}
+
+.fs-5-5{
+    font-size: 0.90rem !important;
+    font-family: "Prompt", sans-serif;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+    font-weight: 500;
+    font-family: "Prompt", sans-serif;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    color: var(--light);
+
+}
+
+.btn-primary:hover {
+    color: #000;
+    background: #ffd6eb;
+    border: #ffd6eb ;
+}
+
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand,
+.navbar a.btn {
+    height: 80px
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 25px 0;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #ffd6ebca;
+}
+
+
+
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.video-home{
+    margin: auto;
+    max-width: 1000px;
+    
+}
+
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: #ffb2d9;
+    border-bottom: 1px solid #ffb2d9;
+    color: #ffffff;
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(15, 66, 41, .6);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: var(--primary);
+    border: 10px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background: linear-gradient(#ffd6ebce, #ffd6ebce), url(../img/nurses-are-well-good-taken-care-elderly-patients-hospital-bed-patients-feel-happiness-medical-healthcare-concept.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+
+
+/*** Top Feature ***/
+@media (min-width: 991.98px) {
+    .top-feature {
+        position: relative;
+        margin-top: -80px;
+        z-index: 1;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .calendar {
+        display: none;
+    }
+}
+
+/*** Facts & Quote ***/
+.facts,
+.quote {
+    background: #ffd6ebce;
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    text-align: center;
+}
+
+.service-item .service-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.service-item .service-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    transform: scale(1.2);
+    transition: .3s;
+    z-index: -1;
+}
+
+.service-item:hover .service-img img {
+    transform: scale(1);
+}
+
+.service-item .service-text {
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.service-item:hover .service-text {
+    background: #ffd6ebca;
+
+}
+
+.service-item .service-text h4,
+.service-item .service-text p {
+    transition: .3;
+}
+
+.service-item:hover .service-text h4 {
+    color: #000000;
+}
+
+.service-item:hover .service-text p {
+    color: #000000;
+}
+
+.service-item .service-text .btn-square {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    transition: .5s;
+}
+
+.service-item:hover .service-text .btn-square {
+    background: var(--light);
+}
+
+.service-item .service-text .btn {
+    width: 31px;
+    height: 31px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--dark);
+    background: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.service-item:hover .service-text .btn {
+    width: 112px;
+}
+
+
+/*** Project Portfolio ***/
+#portfolio-flters {
+    display: inline-block;
+    background: var(--light);
+    padding: 10px 15px;
+}
+
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--primary);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.portfolio-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-inner::before,
+.portfolio-inner::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffc7e477;
+    transition: .5s;
+    color: #000;
+}
+
+.portfolio-inner::after {
+    left: auto;
+    right: 0;
+}
+
+.portfolio-inner:hover::before,
+.portfolio-inner:hover::after {
+    width: 50%;
+}
+
+.portfolio-inner .portfolio-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    z-index: 3;
+    opacity: 0;
+}
+
+.portfolio-inner:hover .portfolio-text {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+.portfolio-inner .portfolio-text .btn {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.portfolio-inner .portfolio-text .btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+
+/*** Team ***/
+.team-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-item .team-text {
+    position: absolute;
+    width: calc(100% - 45px);
+    left: -100%;
+    bottom: 45px;
+    padding: 1.5rem;
+    background: #FFFFFF;
+    border-radius: 0 4px 4px 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    left: 0;
+    opacity: 1;
+}
+
+.team-item .team-social .btn {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.team-item .team-social .btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+.team-item .team-img .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    z-index: 3;
+    opacity: 0;
+}
+
+.team-item:hover .team-img .team-social {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+
+/*** Testimonial ***/
+
+.testimonial-carousel .owl-item img {
+    width: 100%;
+    height: 445px;
+}
+
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--light);
+    border-radius: 4px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.copyright {
+    color: var(--light);
+    background: #ffc0e0;
+}
+
+.copyright a {
+    color: #FFFFFF;
+}
+
+.copyright a:hover {
+    color: var(--primary);
+}
+
+
+/* ปฎิทิน */
+
+
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-muted {
+    color: #777;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  
+  
+  .calendar,
+  .calendar .add-event-day .add-event-day-field-btn,
+  .calendar .calendar-days li:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .calendar {
+    background: white;
+    width: 840px;
+    height: 490px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .calendar .calendar-left-side-day-of-week,
+  .calendar .current-day-events ul,
+  .calendar .add-event-day,
+  .calendar .calendar-change-year,
+  .calendar .calendar-days li {
+    position: relative;
+  }
+  .calendar .calendar-left-side-day,
+  .calendar .calendar-left-side-day-of-week,
+  .calendar .current-day-events,
+  .calendar .add-event-day-field-btn,
+  .calendar .add-event-day-field {
+    color: white;
+  }
+  .calendar .calendar-left-side-day-of-week,
+  .calendar .calendar-week {
+    text-transform: uppercase;
+  }
+  .calendar .right-side,
+  .calendar .left-side {
+    padding: 10px;
+    height: 100%;
+  }
+  .calendar,
+.calendar .left-side,
+.calendar .right-side {
+    position: relative;
+}
+  .calendar .left-side {
+    width: 320px;
+    background: #e4597a;
+    float: left;
+  }
+  .calendar .current-day,
+  .calendar .current-day-events {
+    padding-top: 40px;
+  }
+  .calendar .current-day-events {
+    height: 215px;
+  }
+  .calendar .current-day-events ul {
+    padding-left: 30px;
+    list-style: none;
+  }
+  .calendar .current-day-events ul li::before {
+    content: "-";
+    position: absolute;
+    left: 3px;
+  }
+  .calendar h1.calendar-left-side-day {
+    font-size: 92px;
+  }
+  .calendar .add-event-day {
+    border-bottom: 1px solid white;
+  }
+  .calendar .add-event-day .add-event-day-field {
+    border: none;
+    background: transparent;
+    height: 34px;
+    width: 100%;
+    font-size: 16px;
+    padding-right: 30px;
+  }
+  .calendar .add-event-day .add-event-day-field:focus {
+    outline: none;
+  }
+  .calendar .add-event-day .add-event-day-field::placeholder {
+    color: #fff;
+  }
+  .calendar .add-event-day .add-event-day-field-btn {
+    left: inherit;
+    line-height: 34px;
+  }
+  .calendar .right-side {
+    width: 520px;
+    float: right;
+  }
+  .calendar .calendar-change-year {
+    font-size: 20px;
+  }
+  .calendar .calendar-change-year .calendar-change-year-slider {
+    margin: 15px 0;
+    color: #737373;
+  }
+  .calendar .calendar-change-year .calendar-change-year-slider .fa:hover {
+    color: #404040;
+  }
+  .calendar .calendar-days,
+  .calendar .calendar-week,
+  .calendar .calendar-month {
+    list-style: none;
+    font-size: 0;
+  }
+  .calendar .calendar-days li,
+  .calendar .calendar-week li,
+  .calendar .calendar-month li {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .calendar .calendar-month li {
+    width: calc(460px / 12);
+    height: 30px;
+    line-height: 30px;
+    color: #868686;
+    font-size: 13px;
+  }
+  .calendar .calendar-month li.active {
+    color: #171717;
+    font-weight: 600;
+  }
+  .calendar .calendar-days li {
+    width: calc(460px / 7);
+    height: 50px;
+    line-height: 50px;
+  }
+  .calendar .calendar-days li:after {
+    content: attr(data-day);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #959595;
+  }
+  .calendar .calendar-days li.another-month:after {
+    color: #ccc;
+  }
+  .calendar .calendar-days li:hover:after,
+  .calendar .calendar-days li.selected-day:after,
+  .calendar .calendar-days li.event-day:before,
+  .calendar .calendar-days li.active-day:after {
+    border-radius: 50%;
+  }
+  .calendar .calendar-days li:hover:after,
+  .calendar .calendar-days li.selected-day:after {
+    background: #ccc;
+    color: white;
+  }
+  .calendar .calendar-days li.event-day:before {
+    content: " ";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: #1400c7;
+  }
+  .calendar .calendar-days li.active-day:after {
+    color: white;
+    background: #007bff;
+  }
+  .calendar .calendar-week {
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #737373;
+    border-top: 1px solid #ccc;
+  }
+  .calendar .calendar-week li {
+    width: calc(460px / 7);
+    height: 30px;
+    line-height: 30px;
+  }
+  
